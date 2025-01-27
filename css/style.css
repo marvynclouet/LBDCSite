@@ -104,7 +104,7 @@ a:focus {
 }
 
 .header_section .header_top {
-  padding: 15px 0;
+  padding: 5px 0;
   background-color: #003471;
 }
 
@@ -143,13 +143,15 @@ a:focus {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  margin: 0 5px;
+  padding: 0 10px;
 }
 
 .header_section .header_top .contact_nav a i {
   margin-right: 5px;
   background-color: #159ec0;
-  width: 35px;
-  height: 35px;
+  width: 25px;
+  height: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -173,8 +175,9 @@ a:focus {
   display: flex;
 }
 
-.header_section .header_top .social_box a i {
-  margin-right: 5px;
+.header_section .header_top .social_box a {
+  margin: 0 5px;
+  padding: 0 10px;
   background-color: #159ec0;
   width: 28px;
   height: 28px;
@@ -191,7 +194,7 @@ a:focus {
   border-radius: 100%;
 }
 
-.header_section .header_top .social_box a:hover i {
+.header_section .header_top .social_box a:hover {
   background-color: #da7426;
 }
 
@@ -1127,5 +1130,45 @@ a:focus {
 
 .footer_section p a {
   color: inherit;
+}
+
+/* Ajustement de la taille du logo */
+.navbar-brand img {
+  height: 120px;
+  width: auto; /* Ajuste la largeur tout en conservant les proportions */
+}
+
+.logo-header {
+  width: auto; /* Ajuste la largeur tout en conservant les proportions */
+}
+
+/* Trusted Clients Section Styles */
+.trusted_clients_section {
+  padding: 50px 0;
+  background-color: #f9f9f9; /* Light grey background */
+}
+
+.trusted_clients_section .heading_container {
+  margin-bottom: 30px;
+}
+
+.clients_logo_box {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.client_logo {
+  flex: 1 1 20%; /* Adjust based on how many logos per row you want */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.client_logo img {
+  max-width: 100%;
+  height: auto;
+  padding: 10px; /* Adds space around the logo */
 }
 /*# sourceMappingURL=style.css.map */
