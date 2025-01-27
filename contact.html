@@ -132,37 +132,37 @@
       <div class="row">
         <div class="col-md-6 px-0">
           <div class="form_container">
-            <form action="">
+            <form id="contact-form">
               <div class="form-row">
                 <div class="form-group col">
-                  <input type="text" class="form-control" placeholder="Your Name" />
+                  <input type="text" name="user_name" class="form-control" placeholder="Your Name" required />
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col-lg-6">
-                  <input type="text" class="form-control" placeholder="Phone Number" />
+                  <input type="text" name="user_phone" class="form-control" placeholder="Phone Number" required />
                 </div>
                 <div class="form-group col-lg-6">
-                  <select name="" id="" class="form-control wide">
+                  <select name="service" class="form-control wide">
                     <option value="">Select Service</option>
-                    <option value="">Service 1</option>
-                    <option value="">Service 2</option>
-                    <option value="">Service 3</option>
+                    <option value="Service 1">Service 1</option>
+                    <option value="Service 2">Service 2</option>
+                    <option value="Service 3">Service 3</option>
                   </select>
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col">
-                  <input type="email" class="form-control" placeholder="Email" />
+                  <input type="email" name="user_email" class="form-control" placeholder="Email" required />
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col">
-                  <input type="text" class="message-box form-control" placeholder="Message" />
+                  <input type="text" name="message" class="message-box form-control" placeholder="Message" required />
                 </div>
               </div>
               <div class="btn_box">
-                <button>
+                <button type="submit">
                   SEND
                 </button>
               </div>
@@ -332,6 +332,28 @@
   <!-- Google Map -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
   <!-- End Google Map -->
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+     (function(){
+        emailjs.init("UGRIX5XXp726VhWaT"); // Remplacez "UGRIX5XXp726VhWaT" par votre clé publique réelle
+     })();
+  </script>
+
+  <script type="text/javascript">
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Empêche l'envoi normal du formulaire
+
+      emailjs.sendForm('service_4v8ttrj', 'template_xxxxx', this)
+          .then(function() {
+              console.log('SUCCESS!');
+              alert('Message envoyé avec succès!');
+          }, function(error) {
+              console.log('FAILED...', error);
+              alert('Échec de l\'envoi du message.');
+          });
+  });
+  </script>
 
 </body>
 
