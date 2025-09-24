@@ -1142,6 +1142,14 @@ a:focus {
   width: auto; /* Ajuste la largeur tout en conservant les proportions */
 }
 
+/* Logo navbar en mode mobile: agrandi et lisible */
+@media (max-width: 991px) {
+  .navbar_brand_mobile img {
+    height: 64px !important;
+    width: auto;
+  }
+}
+
 /* Trusted Clients Section Styles */
 .trusted_clients_section {
   padding: 50px 0;
